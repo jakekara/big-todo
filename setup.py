@@ -5,14 +5,14 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="big-todo",
-    version="0.0.1",
+    version="0.0.2",
     author="Jake Kara",
     author_email="jake@jakekara.com",
     description="CLI tool to combine TODO files",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/jakekara/big-todo",
-    packages=[],  # setuptools.find_packages(),
+    packages=['btodo'],  # setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
