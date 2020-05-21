@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="big-todo",
-    version="0.0.3",
+    version="0.0.4",
     author="Jake Kara",
     author_email="jake@jakekara.com",
     description="CLI tool to combine TODO files",
@@ -17,6 +17,9 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
+    ],
+    install_requires=[
+        "glob2"
     ],
     entry_points={
         'console_scripts': ['btodo=btodo:main'],

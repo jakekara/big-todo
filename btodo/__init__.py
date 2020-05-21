@@ -4,7 +4,7 @@ Traverse a folder looking for TODO files and merge into a single TODO file
 
 import sys
 import os
-from glob import glob
+from glob2 import glob
 import argparse
 
 
@@ -14,7 +14,9 @@ def concat_todo_files(todo_files, include_header=False):
     for todo in todo_files:
         if include_header:
             combined += f"\n{todo}\n\n"
-        combined += open(todo,"r").read()
+        file_content = open(todo, "r").read() + "\n"
+        combined += file_content
+
     return combined
 
 
@@ -23,7 +25,9 @@ def list_todo_files(parent, basename="TODO.md"):
     """List any files named {basename} in this directory or any of its
     subdirectories """
 
-    return sorted(glob(os.path.join(parent, f"**/{basename}")))
+    glob_str = os.path.join(parent, f"**/{basename}")
+
+    return sorted(glob(glob_str))
 
 
 def main():
