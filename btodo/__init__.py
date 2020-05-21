@@ -25,7 +25,7 @@ def list_todo_files(parent, basename="TODO.md"):
     """List any files named {basename} in this directory or any of its
     subdirectories """
 
-    glob_str = os.path.join(parent, f"**/{basename}")
+    glob_str = os.path.join(parent, os.path.join("**", f"{basename}"))
 
     return sorted(glob(glob_str))
 
