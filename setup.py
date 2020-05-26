@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="big-todo",
-    version="0.0.4",
+    version="0.0.5",
     author="Jake Kara",
     author_email="jake@jakekara.com",
     description="CLI tool to combine TODO files",

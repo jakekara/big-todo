@@ -4,7 +4,9 @@ Make a big TODO file by concatenating all TODO files in a directory tree.
 
 # install
 
+```
     pip install big-todo
+```
 
 # usage
 
@@ -22,8 +24,10 @@ optional arguments:
 
 From the repo root, run:
 
-    big-todo demo_folder --include-header
-    
+```
+    btodo demo_folder --include-header
+```
+
 This will traverse the demo_folder and generate a virtual TODO file with
 headers turned on, meaning the path of the file being appended will be
 inserted as the first line of output.  
